@@ -1,0 +1,10 @@
+<h1>Episode <%= @episode.number %></h1>
+<h3>Premiered: <%= @episode.date %></h3><br>
+Featuring: <br>
+<ul>
+  <% @episode.guests.each do |guest| %>
+    <li><%= link_to guest.name, guest_path(guest.id) %></li>
+  <% end %>
+</ul>
+
+<%# <%= @episode.avg_rating %> 

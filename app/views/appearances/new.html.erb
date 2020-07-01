@@ -1,0 +1,17 @@
+<h1> !WOW aPpeAraNCeS WOW!</h1>
+<div class= 'error'>
+<% if flash[:my_errors] %>
+<% flash[:my_errors].each do |error|%>
+<%= error %>
+<% end %>
+<% end %>
+
+
+<%= form_for @appearance do |f|%>
+<%= f.collection_select :guest_id, @guests, :id, :name %> appeared in episode <%= f.collection_select :episode_id, @episodes, :id, :number %>.<br>
+
+<%= f.label :rating %>
+<%= f.number_field :rating %>
+
+<%= f.submit %>
+<% end %>

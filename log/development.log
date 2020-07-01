@@ -1,0 +1,1891 @@
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGuests (20170307192014)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "guests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "occupation" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170307192014"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEpisodes (20170309163029)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "episodes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date" date, "number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170309163029"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-01 14:24:21.659686"], ["updated_at", "2020-07-01 14:24:21.659686"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Michael J. Fox"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Michael J. Fox"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.689027"], ["updated_at", "2020-07-01 14:24:42.689027"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Sandra Bernhard"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sandra Bernhard"], ["occupation", "Comedian"], ["created_at", "2020-07-01 14:24:42.694937"], ["updated_at", "2020-07-01 14:24:42.694937"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Tracey Ullman"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tracey Ullman"], ["occupation", "television actress"], ["created_at", "2020-07-01 14:24:42.698692"], ["updated_at", "2020-07-01 14:24:42.698692"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Gillian Anderson"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gillian Anderson"], ["occupation", "film actress"], ["created_at", "2020-07-01 14:24:42.702596"], ["updated_at", "2020-07-01 14:24:42.702596"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "David Alan Grier"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "David Alan Grier"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.708761"], ["updated_at", "2020-07-01 14:24:42.708761"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "William Baldwin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "William Baldwin"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.712961"], ["updated_at", "2020-07-01 14:24:42.712961"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Michael Stipe"], ["LIMIT", 1]]
+  [1m[35m (1.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Michael Stipe"], ["occupation", "Singer-lyricist"], ["created_at", "2020-07-01 14:24:42.718308"], ["updated_at", "2020-07-01 14:24:42.718308"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Carmen Electra"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carmen Electra"], ["occupation", "model"], ["created_at", "2020-07-01 14:24:42.721146"], ["updated_at", "2020-07-01 14:24:42.721146"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Matthew Lillard"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Matthew Lillard"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.724492"], ["updated_at", "2020-07-01 14:24:42.724492"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "David Cross"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "David Cross"], ["occupation", "stand-up comedian"], ["created_at", "2020-07-01 14:24:42.727224"], ["updated_at", "2020-07-01 14:24:42.727224"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Yasmine Bleeth"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Yasmine Bleeth"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.736557"], ["updated_at", "2020-07-01 14:24:42.736557"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "D. L. Hughley"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "D. L. Hughley"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.738567"], ["updated_at", "2020-07-01 14:24:42.738567"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Rebecca Gayheart"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rebecca Gayheart"], ["occupation", "television actress"], ["created_at", "2020-07-01 14:24:42.740481"], ["updated_at", "2020-07-01 14:24:42.740481"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Steven Wright"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Steven Wright"], ["occupation", "Comedian"], ["created_at", "2020-07-01 14:24:42.742410"], ["updated_at", "2020-07-01 14:24:42.742410"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Amy Brenneman"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Amy Brenneman"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.744362"], ["updated_at", "2020-07-01 14:24:42.744362"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Melissa Gilbert"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Melissa Gilbert"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.746250"], ["updated_at", "2020-07-01 14:24:42.746250"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Cathy Moriarty"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cathy Moriarty"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.748151"], ["updated_at", "2020-07-01 14:24:42.748151"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Louie Anderson"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Louie Anderson"], ["occupation", "comedian"], ["created_at", "2020-07-01 14:24:42.750073"], ["updated_at", "2020-07-01 14:24:42.750073"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Sarah Michelle Gellar"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sarah Michelle Gellar"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.751876"], ["updated_at", "2020-07-01 14:24:42.751876"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Melanie C"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Melanie C"], ["occupation", "Singer-songwriter"], ["created_at", "2020-07-01 14:24:42.753686"], ["updated_at", "2020-07-01 14:24:42.753686"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Greg Proops"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Greg Proops"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.756174"], ["updated_at", "2020-07-01 14:24:42.756174"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Maury Povich"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Maury Povich"], ["occupation", "television personality"], ["created_at", "2020-07-01 14:24:42.758523"], ["updated_at", "2020-07-01 14:24:42.758523"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Brooke Shields"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Brooke Shields"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.760427"], ["updated_at", "2020-07-01 14:24:42.760427"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Molly Shannon"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Molly Shannon"], ["occupation", "Comic"], ["created_at", "2020-07-01 14:24:42.762171"], ["updated_at", "2020-07-01 14:24:42.762171"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Chris O'Donnell"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chris O'Donnell"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.764342"], ["updated_at", "2020-07-01 14:24:42.764342"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Christina Ricci"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Christina Ricci"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.766256"], ["updated_at", "2020-07-01 14:24:42.766256"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Tori Amos"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tori Amos"], ["occupation", "Singer-songwriter"], ["created_at", "2020-07-01 14:24:42.768111"], ["updated_at", "2020-07-01 14:24:42.768111"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Yasmine Bleeth"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Bill Maher"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bill Maher"], ["occupation", "comedian"], ["created_at", "2020-07-01 14:24:42.772419"], ["updated_at", "2020-07-01 14:24:42.772419"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Jennifer Love Hewitt"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jennifer Love Hewitt"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.774919"], ["updated_at", "2020-07-01 14:24:42.774919"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Goo Goo Dolls"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Goo Goo Dolls"], ["occupation", "rock band"], ["created_at", "2020-07-01 14:24:42.777084"], ["updated_at", "2020-07-01 14:24:42.777084"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Dave Grohl"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dave Grohl"], ["occupation", "musician"], ["created_at", "2020-07-01 14:24:42.778745"], ["updated_at", "2020-07-01 14:24:42.778745"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Stephen Rea"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Stephen Rea"], ["occupation", "Film actor"], ["created_at", "2020-07-01 14:24:42.780762"], ["updated_at", "2020-07-01 14:24:42.780762"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Roshumba Williams"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Roshumba Williams"], ["occupation", "Model"], ["created_at", "2020-07-01 14:24:42.782683"], ["updated_at", "2020-07-01 14:24:42.782683"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Kellie Martin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kellie Martin"], ["occupation", "television actress"], ["created_at", "2020-07-01 14:24:42.784648"], ["updated_at", "2020-07-01 14:24:42.784648"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Kathy Griffin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kathy Griffin"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.786488"], ["updated_at", "2020-07-01 14:24:42.786488"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Laura San Giacomo"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Laura San Giacomo"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.788382"], ["updated_at", "2020-07-01 14:24:42.788382"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Joan Lunden"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Joan Lunden"], ["occupation", "journalist"], ["created_at", "2020-07-01 14:24:42.790570"], ["updated_at", "2020-07-01 14:24:42.790570"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Shannen Doherty"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Shannen Doherty"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.792489"], ["updated_at", "2020-07-01 14:24:42.792489"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Greatest Millennium Special"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Greatest Millennium Special"], ["occupation", "NA"], ["created_at", "2020-07-01 14:24:42.794604"], ["updated_at", "2020-07-01 14:24:42.794604"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "George Carlin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "George Carlin"], ["occupation", "comedian"], ["created_at", "2020-07-01 14:24:42.796855"], ["updated_at", "2020-07-01 14:24:42.796855"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Michael Boatman"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Michael Boatman"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.799042"], ["updated_at", "2020-07-01 14:24:42.799042"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "David Boreanaz"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "David Boreanaz"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.800985"], ["updated_at", "2020-07-01 14:24:42.800985"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Jewel"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jewel"], ["occupation", "singer-songwriter"], ["created_at", "2020-07-01 14:24:42.803312"], ["updated_at", "2020-07-01 14:24:42.803312"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Paul Rudd"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Paul Rudd"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.805999"], ["updated_at", "2020-07-01 14:24:42.805999"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Senator Bob Dole"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Senator Bob Dole"], ["occupation", "us senator"], ["created_at", "2020-07-01 14:24:42.810064"], ["updated_at", "2020-07-01 14:24:42.810064"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Senator Bob Dole"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Rob Schneider"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rob Schneider"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.814158"], ["updated_at", "2020-07-01 14:24:42.814158"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "George Carlin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Pamela Anderson"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pamela Anderson"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.817956"], ["updated_at", "2020-07-01 14:24:42.817956"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Pamela Anderson"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Pamela Anderson"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Daniel Stern"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Daniel Stern"], ["occupation", "film actor"], ["created_at", "2020-07-01 14:24:42.823802"], ["updated_at", "2020-07-01 14:24:42.823802"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Melina Kanakaredes"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Melina Kanakaredes"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.826157"], ["updated_at", "2020-07-01 14:24:42.826157"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Ed McMahon"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ed McMahon"], ["occupation", "comedian"], ["created_at", "2020-07-01 14:24:42.828834"], ["updated_at", "2020-07-01 14:24:42.828834"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Mike Judge"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mike Judge"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.831657"], ["updated_at", "2020-07-01 14:24:42.831657"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Dave Foley"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dave Foley"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.833975"], ["updated_at", "2020-07-01 14:24:42.833975"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Kellie Martin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Jerry O'Connell"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jerry O'Connell"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.837346"], ["updated_at", "2020-07-01 14:24:42.837346"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Melissa Gilbert"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Brendan Fraser"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Brendan Fraser"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.841694"], ["updated_at", "2020-07-01 14:24:42.841694"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "John Tesh"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "John Tesh"], ["occupation", "pianist"], ["created_at", "2020-07-01 14:24:42.844515"], ["updated_at", "2020-07-01 14:24:42.844515"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Sammy Hagar"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sammy Hagar"], ["occupation", "Vocalist"], ["created_at", "2020-07-01 14:24:42.847425"], ["updated_at", "2020-07-01 14:24:42.847425"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Hootie & the Blowfish"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hootie & the Blowfish"], ["occupation", "rock band"], ["created_at", "2020-07-01 14:24:42.849936"], ["updated_at", "2020-07-01 14:24:42.849936"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Hootie & the Blowfish"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "guests" SET "occupation" = ?, "updated_at" = ? WHERE "guests"."id" = ?[0m  [["occupation", "actor"], ["updated_at", "2020-07-01 14:24:42.852213"], ["id", 57]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Peter Krause"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Peter Krause"], ["occupation", "Film actor"], ["created_at", "2020-07-01 14:24:42.855127"], ["updated_at", "2020-07-01 14:24:42.855127"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Chris Isaak"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chris Isaak"], ["occupation", "musician"], ["created_at", "2020-07-01 14:24:42.858130"], ["updated_at", "2020-07-01 14:24:42.858130"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Frank DeCaro's Oscar Special"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Frank DeCaro's Oscar Special"], ["occupation", "writer"], ["created_at", "2020-07-01 14:24:42.860984"], ["updated_at", "2020-07-01 14:24:42.860984"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Frank DeCaro's Oscar Special"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "guests" SET "occupation" = ?, "updated_at" = ? WHERE "guests"."id" = ?[0m  [["occupation", "actor"], ["updated_at", "2020-07-01 14:24:42.864167"], ["id", 60]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Joseph Gordon-Levitt"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Joseph Gordon-Levitt"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.866710"], ["updated_at", "2020-07-01 14:24:42.866710"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Eric McCormack"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Eric McCormack"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.869023"], ["updated_at", "2020-07-01 14:24:42.869023"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Jennifer Grey"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jennifer Grey"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.871821"], ["updated_at", "2020-07-01 14:24:42.871821"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Norm Macdonald"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Norm Macdonald"], ["occupation", "Stand-up comedian"], ["created_at", "2020-07-01 14:24:42.874784"], ["updated_at", "2020-07-01 14:24:42.874784"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Sandra Bullock"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sandra Bullock"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.877239"], ["updated_at", "2020-07-01 14:24:42.877239"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Janine Turner"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Janine Turner"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.879838"], ["updated_at", "2020-07-01 14:24:42.879838"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Ron Howard"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ron Howard"], ["occupation", "Film director"], ["created_at", "2020-07-01 14:24:42.882306"], ["updated_at", "2020-07-01 14:24:42.882306"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Jeri Ryan"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jeri Ryan"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.884944"], ["updated_at", "2020-07-01 14:24:42.884944"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Omar Epps"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Omar Epps"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.887333"], ["updated_at", "2020-07-01 14:24:42.887333"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Diane Lane"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Diane Lane"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.890066"], ["updated_at", "2020-07-01 14:24:42.890066"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Ryan Phillippe"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ryan Phillippe"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.892686"], ["updated_at", "2020-07-01 14:24:42.892686"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Ian McKellen"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ian McKellen"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.895352"], ["updated_at", "2020-07-01 14:24:42.895352"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Jon Voight"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jon Voight"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.898041"], ["updated_at", "2020-07-01 14:24:42.898041"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Stephen Baldwin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Stephen Baldwin"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.900662"], ["updated_at", "2020-07-01 14:24:42.900662"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Ernie Hudson"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ernie Hudson"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.904047"], ["updated_at", "2020-07-01 14:24:42.904047"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Josh Charles"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Josh Charles"], ["occupation", "film actor"], ["created_at", "2020-07-01 14:24:42.906880"], ["updated_at", "2020-07-01 14:24:42.906880"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Jackie Chan"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jackie Chan"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.909825"], ["updated_at", "2020-07-01 14:24:42.909825"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Marlee Matlin"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Marlee Matlin"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.912752"], ["updated_at", "2020-07-01 14:24:42.912752"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Sharon Lawrence"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sharon Lawrence"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.915232"], ["updated_at", "2020-07-01 14:24:42.915232"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Rob Estes"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rob Estes"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.918234"], ["updated_at", "2020-07-01 14:24:42.918234"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Angelina Jolie"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Angelina Jolie"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.921498"], ["updated_at", "2020-07-01 14:24:42.921498"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "David Spade"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "David Spade"], ["occupation", "stand-up comedian"], ["created_at", "2020-07-01 14:24:42.925556"], ["updated_at", "2020-07-01 14:24:42.925556"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Seth Green"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Seth Green"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.928351"], ["updated_at", "2020-07-01 14:24:42.928351"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Sheryl Lee Ralph"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sheryl Lee Ralph"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.931215"], ["updated_at", "2020-07-01 14:24:42.931215"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Chris Robinson"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chris Robinson"], ["occupation", "singer"], ["created_at", "2020-07-01 14:24:42.934198"], ["updated_at", "2020-07-01 14:24:42.934198"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Joy Behar"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Joy Behar"], ["occupation", "comedian"], ["created_at", "2020-07-01 14:24:42.937091"], ["updated_at", "2020-07-01 14:24:42.937091"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Thomas Gibson"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thomas Gibson"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.940587"], ["updated_at", "2020-07-01 14:24:42.940587"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Paula Cale"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Paula Cale"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.944471"], ["updated_at", "2020-07-01 14:24:42.944471"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Ted Danson"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ted Danson"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.947500"], ["updated_at", "2020-07-01 14:24:42.947500"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Esai Morales"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Esai Morales"], ["occupation", "actor"], ["created_at", "2020-07-01 14:24:42.950469"], ["updated_at", "2020-07-01 14:24:42.950469"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."name" = ? LIMIT ?[0m  [["name", "Jane Seymour"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "guests" ("name", "occupation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jane Seymour"], ["occupation", "actress"], ["created_at", "2020-07-01 14:24:42.953027"], ["updated_at", "2020-07-01 14:24:42.953027"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-08"], ["number", 1], ["created_at", "2020-07-01 14:24:42.963609"], ["updated_at", "2020-07-01 14:24:42.963609"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-09"], ["number", 2], ["created_at", "2020-07-01 14:24:42.966262"], ["updated_at", "2020-07-01 14:24:42.966262"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-10"], ["number", 3], ["created_at", "2020-07-01 14:24:42.968230"], ["updated_at", "2020-07-01 14:24:42.968230"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-11"], ["number", 4], ["created_at", "2020-07-01 14:24:42.970131"], ["updated_at", "2020-07-01 14:24:42.970131"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-12"], ["number", 5], ["created_at", "2020-07-01 14:24:42.972148"], ["updated_at", "2020-07-01 14:24:42.972148"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-13"], ["number", 6], ["created_at", "2020-07-01 14:24:42.975210"], ["updated_at", "2020-07-01 14:24:42.975210"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-14"], ["number", 7], ["created_at", "2020-07-01 14:24:42.977027"], ["updated_at", "2020-07-01 14:24:42.977027"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-15"], ["number", 8], ["created_at", "2020-07-01 14:24:42.978900"], ["updated_at", "2020-07-01 14:24:42.978900"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-16"], ["number", 9], ["created_at", "2020-07-01 14:24:42.980935"], ["updated_at", "2020-07-01 14:24:42.980935"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-17"], ["number", 10], ["created_at", "2020-07-01 14:24:42.983105"], ["updated_at", "2020-07-01 14:24:42.983105"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-18"], ["number", 11], ["created_at", "2020-07-01 14:24:42.984994"], ["updated_at", "2020-07-01 14:24:42.984994"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-19"], ["number", 12], ["created_at", "2020-07-01 14:24:42.986703"], ["updated_at", "2020-07-01 14:24:42.986703"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-20"], ["number", 13], ["created_at", "2020-07-01 14:24:42.989064"], ["updated_at", "2020-07-01 14:24:42.989064"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-21"], ["number", 14], ["created_at", "2020-07-01 14:24:42.991508"], ["updated_at", "2020-07-01 14:24:42.991508"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-22"], ["number", 15], ["created_at", "2020-07-01 14:24:42.993464"], ["updated_at", "2020-07-01 14:24:42.993464"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-23"], ["number", 16], ["created_at", "2020-07-01 14:24:42.995261"], ["updated_at", "2020-07-01 14:24:42.995261"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-24"], ["number", 17], ["created_at", "2020-07-01 14:24:42.997330"], ["updated_at", "2020-07-01 14:24:42.997330"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-25"], ["number", 18], ["created_at", "2020-07-01 14:24:42.999413"], ["updated_at", "2020-07-01 14:24:42.999413"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-26"], ["number", 19], ["created_at", "2020-07-01 14:24:43.001415"], ["updated_at", "2020-07-01 14:24:43.001415"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-27"], ["number", 20], ["created_at", "2020-07-01 14:24:43.003359"], ["updated_at", "2020-07-01 14:24:43.003359"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-28"], ["number", 21], ["created_at", "2020-07-01 14:24:43.006109"], ["updated_at", "2020-07-01 14:24:43.006109"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-29"], ["number", 22], ["created_at", "2020-07-01 14:24:43.008665"], ["updated_at", "2020-07-01 14:24:43.008665"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-09-30"], ["number", 23], ["created_at", "2020-07-01 14:24:43.010965"], ["updated_at", "2020-07-01 14:24:43.010965"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-01"], ["number", 24], ["created_at", "2020-07-01 14:24:43.013142"], ["updated_at", "2020-07-01 14:24:43.013142"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-02"], ["number", 25], ["created_at", "2020-07-01 14:24:43.015300"], ["updated_at", "2020-07-01 14:24:43.015300"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-03"], ["number", 26], ["created_at", "2020-07-01 14:24:43.017298"], ["updated_at", "2020-07-01 14:24:43.017298"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-04"], ["number", 27], ["created_at", "2020-07-01 14:24:43.019466"], ["updated_at", "2020-07-01 14:24:43.019466"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-05"], ["number", 28], ["created_at", "2020-07-01 14:24:43.021899"], ["updated_at", "2020-07-01 14:24:43.021899"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-06"], ["number", 29], ["created_at", "2020-07-01 14:24:43.024868"], ["updated_at", "2020-07-01 14:24:43.024868"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-07"], ["number", 30], ["created_at", "2020-07-01 14:24:43.027740"], ["updated_at", "2020-07-01 14:24:43.027740"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-08"], ["number", 31], ["created_at", "2020-07-01 14:24:43.038541"], ["updated_at", "2020-07-01 14:24:43.038541"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-09"], ["number", 32], ["created_at", "2020-07-01 14:24:43.040616"], ["updated_at", "2020-07-01 14:24:43.040616"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-10"], ["number", 33], ["created_at", "2020-07-01 14:24:43.042536"], ["updated_at", "2020-07-01 14:24:43.042536"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-11"], ["number", 34], ["created_at", "2020-07-01 14:24:43.044658"], ["updated_at", "2020-07-01 14:24:43.044658"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-12"], ["number", 35], ["created_at", "2020-07-01 14:24:43.046499"], ["updated_at", "2020-07-01 14:24:43.046499"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-13"], ["number", 36], ["created_at", "2020-07-01 14:24:43.048742"], ["updated_at", "2020-07-01 14:24:43.048742"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-14"], ["number", 37], ["created_at", "2020-07-01 14:24:43.050857"], ["updated_at", "2020-07-01 14:24:43.050857"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-15"], ["number", 38], ["created_at", "2020-07-01 14:24:43.052778"], ["updated_at", "2020-07-01 14:24:43.052778"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-16"], ["number", 39], ["created_at", "2020-07-01 14:24:43.054888"], ["updated_at", "2020-07-01 14:24:43.054888"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "episodes" ("date", "number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["date", "2015-10-17"], ["number", 40], ["created_at", "2020-07-01 14:24:43.057149"], ["updated_at", "2020-07-01 14:24:43.057149"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+Started GET "/" for 127.0.0.1 at 2020-07-01 11:22:05 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAppearances (20200701143842)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "appearances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "guest_id" integer, "episode_id" integer, "rating" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_6fd5d3b3be"
+FOREIGN KEY ("guest_id")
+  REFERENCES "guests" ("id")
+, CONSTRAINT "fk_rails_ad92bfc19a"
+FOREIGN KEY ("episode_id")
+  REFERENCES "episodes" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_appearances_on_guest_id" ON "appearances" ("guest_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_appearances_on_guest_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_appearances_on_guest_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_appearances_on_episode_id" ON "appearances" ("episode_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200701143842"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_appearances_on_episode_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_appearances_on_episode_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_appearances_on_guest_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_appearances_on_guest_id' AND type='index'
+[0m
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+Started GET "/" for 127.0.0.1 at 2020-07-01 11:23:06 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/SeriousBiz/.rvm/gems/ruby-2.6.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/SeriousBiz/.rvm/gems/ruby-2.6.1/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 14ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 11:23:15 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered appearances/new.html.erb within layouts/application (135.9ms)
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `appearances_path' for #<#<Class:0x00007fbf5d3b6e78>:0x00007fbf5d3a5060>):
+     7: <% end %>
+     8: 
+     9: 
+    10: <%= form_for @appearance do |t|%>
+    11: <%= f.collection_select :guest_id, @guests, :id, :name %> appeared in episode <%= f.collection_select :episode_id, @episodes, :id, :number %>.<br>
+    12: 
+    13: <%= f.label :rating %>
+  
+app/views/appearances/new.html.erb:10:in `_app_views_appearances_new_html_erb___466655661182137401_70229939830200'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 11:24:32 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Guest Load (0.0ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered appearances/new.html.erb within layouts/application (134.4ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x00007fbf5ca57b48>:0x00007fbf5ca547e0>):
+     8: 
+     9: 
+    10: <%= form_for @appearance do |t|%>
+    11: <%= f.collection_select :guest_id, @guests, :id, :name %> appeared in episode <%= f.collection_select :episode_id, @episodes, :id, :number %>.<br>
+    12: 
+    13: <%= f.label :rating %>
+    14: <%= f.number_field :rating %>
+  
+app/views/appearances/new.html.erb:11:in `block in _app_views_appearances_new_html_erb___466655661182137401_70229939142000'
+app/views/appearances/new.html.erb:10:in `_app_views_appearances_new_html_erb___466655661182137401_70229939142000'
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 11:25:00 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mEpisode Load (0.3ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered appearances/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 711ms (Views: 709.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/appearances/index" for 127.0.0.1 at 2020-07-01 11:25:09 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/appearances/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/appearances/index" for 127.0.0.1 at 2020-07-01 11:26:21 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/appearances/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+Started POST "/appearances/index" for 127.0.0.1 at 2020-07-01 11:27:20 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/appearances/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+Started POST "/appearances/index" for 127.0.0.1 at 2020-07-01 11:27:44 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/appearances/index"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 11:28:56 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered appearances/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 259ms (Views: 235.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 11:29:02 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k/SZzx2T6jmVd/b//WZ7rqAqOXg97/oYIcVh7xjFzMhSNqDG8LSze1FMjte3bKnvdpp6cQbY42228JeOUpu7wQ==", "appearance"=>{"guest_id"=>"8", "episode_id"=>"13", "rating"=>"3"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 8], ["episode_id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "appearances" ("guest_id", "episode_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["guest_id", 8], ["episode_id", 13], ["rating", 3], ["created_at", "2020-07-01 15:29:02.566621"], ["updated_at", "2020-07-01 15:29:02.566621"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Unpermitted parameters: :guest_id, :rating
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"episodes", "episode_id"=>"13"}, missing required keys: [:id]):
+  
+app/controllers/appearances_controller.rb:13:in `create'
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 11:29:48 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k/SZzx2T6jmVd/b//WZ7rqAqOXg97/oYIcVh7xjFzMhSNqDG8LSze1FMjte3bKnvdpp6cQbY42228JeOUpu7wQ==", "appearance"=>{"guest_id"=>"8", "episode_id"=>"13", "rating"=>"3"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 8], ["episode_id", 13], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Unpermitted parameters: :guest_id, :rating
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `id' for #<ActionController::Parameters:0x00007fbb32a302b0>):
+  
+app/controllers/appearances_controller.rb:13:in `create'
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 11:30:42 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered appearances/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 44ms (Views: 28.5ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 11:30:45 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1p1/JU6/1eUVZNg9ThOWPE5+Kl0JJB/TXGdmUPXlCKumEz1eB2mFVBu60i/MpwZJ4m7oE8TiQraRGv4CYnjKw==", "appearance"=>{"guest_id"=>"1", "episode_id"=>"1", "rating"=>"4"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 1], ["episode_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "appearances" ("guest_id", "episode_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["guest_id", 1], ["episode_id", 1], ["rating", 4], ["created_at", "2020-07-01 15:30:45.930391"], ["updated_at", "2020-07-01 15:30:45.930391"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Unpermitted parameters: :guest_id, :rating
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Episode with 'id'={"episode_id"=>"1"}):
+  
+app/controllers/appearances_controller.rb:13:in `create'
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 11:31:49 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1p1/JU6/1eUVZNg9ThOWPE5+Kl0JJB/TXGdmUPXlCKumEz1eB2mFVBu60i/MpwZJ4m7oE8TiQraRGv4CYnjKw==", "appearance"=>{"guest_id"=>"7", "episode_id"=>"1", "rating"=>"4"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 7], ["episode_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "appearances" ("guest_id", "episode_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["guest_id", 7], ["episode_id", 1], ["rating", 4], ["created_at", "2020-07-01 15:31:49.724509"], ["updated_at", "2020-07-01 15:31:49.724509"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEpisode Load (0.3ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/episodes/1
+Completed 302 Found in 29ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:31:49 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 11:32:05 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b1p1/JU6/1eUVZNg9ThOWPE5+Kl0JJB/TXGdmUPXlCKumEz1eB2mFVBu60i/MpwZJ4m7oE8TiQraRGv4CYnjKw==", "appearance"=>{"guest_id"=>"7", "episode_id"=>"1", "rating"=>"4"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 7], ["episode_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/episodes/1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:32:05 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:32:32 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:32:39 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:32:50 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 11:33:18 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering guests/show.html.erb within layouts/application
+  Rendered guests/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:43:08 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 39ms (Views: 26.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 11:43:10 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  Rendered guests/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `appearance' for #<Episode:0x00007fbb33025eb8>):
+    4: <ul><% @guest.episodes.each do |episode| %>
+    5: <li>Episode <%= episode.number %><br>
+    6: Date: <%= link_to episode.date, episode_path(episode.id)  %><br>
+    7:  <%= episode.appearance.find_by(guest_id: @guest.id).rating %> stars</li>
+    8:  <%end%></ul>
+  
+app/views/guests/show.html.erb:7:in `block in _app_views_guests_show_html_erb___3402351487428121139_70220953810260'
+app/views/guests/show.html.erb:4:in `_app_views_guests_show_html_erb___3402351487428121139_70220953810260'
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 11:43:19 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  [1m[36mAppearance Load (0.2ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 1], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:48:40 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? LIMIT ?[0m  [["episode_id", 1], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `map' for #<Appearance:0x00007fbb2bf4f4f0>):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <% ratings = Appearance.find_by(episode_id: @episode.id).map do |episode|%>
+    11: <% episode.rating %>
+    12: <% end %>
+    13: <%= ratings.sum/ratings.length %>
+  
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220936509840'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:49:16 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `find_all_by' for #<Class:0x00007fbb32881388>):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <% ratings = Appearance.find_all_by(episode_id: @episode.id).map do |episode|%>
+    11: <% episode.rating %>
+    12: <% end %>
+    13: <%= ratings.sum/ratings.length %>
+  
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70221000128380'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:50:05 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 11:52:05 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  [1m[36mAppearance Load (0.2ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 1], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:52:10 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.2ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (98.5ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `ratings' for #<#<Class:0x00007fbb328681a8>:0x00007fbb33106440>):
+    10: <% appearances = Appearance.all.map do |appearance|%>
+    11: <% appearance.episode == @episode %>
+    12: <% end %>
+    13: <%= ratings.sum/ratings.length %>
+  
+app/views/episodes/show.html.erb:13:in `_app_views_episodes_show_html_erb___4515027254358036162_70220996163140'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:53:35 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `rating' for false:FalseClass):
+    12: <% end %>
+    13: 
+    14: <% ratings = appearances.map do |guest|%>
+    15: <% guest.rating %>
+    16: <% end %>
+    17: <%= ratings.sum/ratings.length %>
+  
+app/views/episodes/show.html.erb:15:in `block in _app_views_episodes_show_html_erb___4515027254358036162_70220936309820'
+app/views/episodes/show.html.erb:14:in `map'
+app/views/episodes/show.html.erb:14:in `_app_views_episodes_show_html_erb___4515027254358036162_70220936309820'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:54:27 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.4ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:54:33 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:54:59 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE Episode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:55:43 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 11:59:52 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (104.9ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `avg_ratings' for #<#<Class:0x00007fbb3301c368>:0x00007fbb33026200>):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= self.avg_ratings %>
+  
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220995683700'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:00:00 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (99.8ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `avg_rating' for #<#<Class:0x00007fbb3301c368>:0x00007fbb2c6ee148>):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= self.avg_rating %>
+  
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220940539080'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:00:20 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (10.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (divided by 0):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= @episode.avg_rating %>
+  
+app/models/episode.rb:11:in `/'
+app/models/episode.rb:11:in `block in avg_rating'
+app/models/episode.rb:7:in `avg_rating'
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220936131140'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:00:33 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (divided by 0):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= @episode.avg_rating %>
+  
+app/models/episode.rb:11:in `/'
+app/models/episode.rb:11:in `block in avg_rating'
+app/models/episode.rb:7:in `avg_rating'
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220996332320'
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 12:00:40 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered appearances/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 12:00:45 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h1QInH62u+ogaAZ3iZuuvF+EsCNiGZ25P2SpASXmBbZGljGVk5HiqORTfl/DkXz9iTTzKlkuhMyoUV9gb7hyvw==", "appearance"=>{"guest_id"=>"13", "episode_id"=>"1", "rating"=>"3"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 13], ["episode_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "appearances" ("guest_id", "episode_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["guest_id", 13], ["episode_id", 1], ["rating", 3], ["created_at", "2020-07-01 16:00:45.654747"], ["updated_at", "2020-07-01 16:00:45.654747"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/episodes/1
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:00:45 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.2ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (divided by 0):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= @episode.avg_rating %>
+  
+app/models/episode.rb:11:in `/'
+app/models/episode.rb:11:in `block in avg_rating'
+app/models/episode.rb:7:in `avg_rating'
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220992725180'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:01:02 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  Rendered episodes/show.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `episodes' for #<Appearance:0x00007fbb2beaccf0>):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= @episode.avg_rating %>
+  
+app/models/episode.rb:8:in `block in avg_rating'
+app/models/episode.rb:7:in `avg_rating'
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220991680160'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:01:22 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendered episodes/show.html.erb within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (divided by 0):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= @episode.avg_rating %>
+  
+app/models/episode.rb:11:in `/'
+app/models/episode.rb:11:in `block in avg_rating'
+app/models/episode.rb:7:in `avg_rating'
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220935241180'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:01:59 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (15.1ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `avg_rating' for #<Episode:0x00007fbb32c31fc8>):
+     7:   <% end %>
+     8: </ul>
+     9: 
+    10: <%= @episode.avg_rating %>
+  
+app/views/episodes/show.html.erb:10:in `_app_views_episodes_show_html_erb___4515027254358036162_70220993627980'
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:02:25 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 12:02:33 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 1], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:02:36 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/episodes" for 127.0.0.1 at 2020-07-01 12:02:40 -0400
+Processing by EpisodesController#index as HTML
+  Rendering episodes/index.html.erb within layouts/application
+  [1m[36mEpisode Load (0.3ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered episodes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/episodes" for 127.0.0.1 at 2020-07-01 12:03:59 -0400
+Processing by EpisodesController#index as HTML
+  Rendering episodes/index.html.erb within layouts/application
+  [1m[36mEpisode Load (0.3ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered episodes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:04:01 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2020-07-01 12:04:11 -0400
+Processing by GuestsController#index as HTML
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  Rendered guests/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2020-07-01 12:04:39 -0400
+Processing by GuestsController#index as HTML
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  Rendered guests/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/3" for 127.0.0.1 at 2020-07-01 12:04:40 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 3]]
+  Rendered guests/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 12:04:42 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  [1m[36mAppearance Load (0.2ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 1], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.4ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/SeriousBiz/Flatiron/code/module-2-code-challenge-round-1-nyc01-seng-ft-060120-module-2-code-challenge---late-show-1593612516/config/initializers/new_framework_defaults.rb:21)
+Started GET "/guests" for 127.0.0.1 at 2020-07-01 12:11:28 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GuestsController#index as HTML
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (1.0ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  Rendered guests/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 215ms (Views: 198.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 12:11:34 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  [1m[36mAppearance Load (0.2ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 1], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:11:49 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/7" for 127.0.0.1 at 2020-07-01 12:11:57 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 7]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 7], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:11:58 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 12:12:08 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered appearances/new.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 12:12:27 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9YDEdlOQ94AqZfqIeHafPbcqn+CpfQ3TdpKCqR0o3/U0Qv1/vreuwu5egqAyfE18YZrc6ZJKFKbhp3TIV3ao/A==", "appearance"=>{"guest_id"=>"67", "episode_id"=>"18", "rating"=>"11"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 67], ["episode_id", 18], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Redirected to http://localhost:3000/episodes/18
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/episodes/18" for 127.0.0.1 at 2020-07-01 12:12:27 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 18]]
+  Rendered episodes/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 12:16:01 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.7ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered appearances/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 50ms (Views: 31.0ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 12:16:14 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE8NQF47qVIdv4OeLaE9g74fCtj1VGpZku00KqSuR1n9jTRJsxzwENmE+7Znq+/CaK9J0c5jcywF2MJL7vAwUA==", "appearance"=>{"guest_id"=>"11", "episode_id"=>"12", "rating"=>"15"}, "commit"=>"Create Appearance"}
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `appearance_params' for #<AppearancesController:0x00007f87a3d92ce0>):
+  
+app/controllers/appearances_controller.rb:11:in `create'
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 12:17:03 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE8NQF47qVIdv4OeLaE9g74fCtj1VGpZku00KqSuR1n9jTRJsxzwENmE+7Znq+/CaK9J0c5jcywF2MJL7vAwUA==", "appearance"=>{"guest_id"=>"11", "episode_id"=>"12", "rating"=>"4"}, "commit"=>"Create Appearance"}
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `appearance_params' for #<AppearancesController:0x00007f87a1d3c2e8>):
+  
+app/controllers/appearances_controller.rb:11:in `create'
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 12:19:56 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE8NQF47qVIdv4OeLaE9g74fCtj1VGpZku00KqSuR1n9jTRJsxzwENmE+7Znq+/CaK9J0c5jcywF2MJL7vAwUA==", "appearance"=>{"guest_id"=>"11", "episode_id"=>"12", "rating"=>"4"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 11], ["episode_id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "appearances" ("guest_id", "episode_id", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["guest_id", 11], ["episode_id", 12], ["rating", 4], ["created_at", "2020-07-01 16:19:56.404599"], ["updated_at", "2020-07-01 16:19:56.404599"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://localhost:3000/episodes/12
+Completed 302 Found in 42ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/episodes/12" for 127.0.0.1 at 2020-07-01 12:19:56 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 12]]
+  Rendered episodes/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 12:20:01 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE8NQF47qVIdv4OeLaE9g74fCtj1VGpZku00KqSuR1n9jTRJsxzwENmE+7Znq+/CaK9J0c5jcywF2MJL7vAwUA==", "appearance"=>{"guest_id"=>"11", "episode_id"=>"12", "rating"=>"13"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.0ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 11], ["episode_id", 12], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://localhost:3000/episodes/12
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/episodes/12" for 127.0.0.1 at 2020-07-01 12:20:01 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 12]]
+  Rendered episodes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/7" for 127.0.0.1 at 2020-07-01 12:23:54 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 7]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 7], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 12:23:56 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 1], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2020-07-01 12:23:56 -0400
+Processing by GuestsController#index as HTML
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  Rendered guests/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 12:24:10 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 1], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/episodes/1" for 127.0.0.1 at 2020-07-01 12:24:12 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 1]]
+  Rendered episodes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/episodes" for 127.0.0.1 at 2020-07-01 12:24:17 -0400
+Processing by EpisodesController#index as HTML
+  Rendering episodes/index.html.erb within layouts/application
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered episodes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/episodes/30" for 127.0.0.1 at 2020-07-01 12:24:21 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 30]]
+  Rendered episodes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/episodes/16" for 127.0.0.1 at 2020-07-01 12:24:24 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 16]]
+  Rendered episodes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/episodes/24" for 127.0.0.1 at 2020-07-01 12:24:26 -0400
+Processing by EpisodesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mEpisode Load (0.2ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering episodes/show.html.erb within layouts/application
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT "guests".* FROM "guests" INNER JOIN "appearances" ON "guests"."id" = "appearances"."guest_id" WHERE "appearances"."episode_id" = ?[0m  [["episode_id", 24]]
+  Rendered episodes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/1" for 127.0.0.1 at 2020-07-01 12:24:30 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 1]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 1], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/7" for 127.0.0.1 at 2020-07-01 12:24:32 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 7]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 7], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests" for 127.0.0.1 at 2020-07-01 12:24:33 -0400
+Processing by GuestsController#index as HTML
+  Rendering guests/index.html.erb within layouts/application
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  Rendered guests/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/guests/4" for 127.0.0.1 at 2020-07-01 12:24:35 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mGuest Load (0.2ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 4]]
+  Rendered guests/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/7" for 127.0.0.1 at 2020-07-01 12:24:38 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 7]]
+  [1m[36mAppearance Load (0.1ms)[0m  [1m[34mSELECT  "appearances".* FROM "appearances" WHERE "appearances"."episode_id" = ? AND "appearances"."guest_id" = ? LIMIT ?[0m  [["episode_id", 1], ["guest_id", 7], ["LIMIT", 1]]
+  Rendered guests/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/guests/38" for 127.0.0.1 at 2020-07-01 12:24:39 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 38]]
+  Rendered guests/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/guests/48" for 127.0.0.1 at 2020-07-01 12:24:41 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"48"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 48], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 48]]
+  Rendered guests/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/guests/77" for 127.0.0.1 at 2020-07-01 12:24:43 -0400
+Processing by GuestsController#show as HTML
+  Parameters: {"id"=>"77"}
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+  Rendering guests/show.html.erb within layouts/application
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes" INNER JOIN "appearances" ON "episodes"."id" = "appearances"."episode_id" WHERE "appearances"."guest_id" = ?[0m  [["guest_id", 77]]
+  Rendered guests/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 12:28:00 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered appearances/new.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 52ms (Views: 38.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/appearances" for 127.0.0.1 at 2020-07-01 12:28:10 -0400
+Processing by AppearancesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GUHcc4vIn/3z6HCmUHW05fDSBcYCEW92HIg39uK3Yz7Yg+V6Zu/GvzfTCI4af2akJmJGzzkmdgOLvcGXqOkUNw==", "appearance"=>{"guest_id"=>"9", "episode_id"=>"12", "rating"=>"8"}, "commit"=>"Create Appearance"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGuest Load (0.1ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT  "episodes".* FROM "episodes" WHERE "episodes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 9], ["episode_id", 12], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mAppearance Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "appearances" WHERE "appearances"."guest_id" = ? AND "appearances"."episode_id" = ? LIMIT ?[0m  [["guest_id", 9], ["episode_id", 12], ["LIMIT", 1]]
+Redirected to http://localhost:3000/appearances/new
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/appearances/new" for 127.0.0.1 at 2020-07-01 12:28:10 -0400
+Processing by AppearancesController#new as HTML
+  Rendering appearances/new.html.erb within layouts/application
+  [1m[36mGuest Load (0.3ms)[0m  [1m[34mSELECT "guests".* FROM "guests"[0m
+  [1m[36mEpisode Load (0.1ms)[0m  [1m[34mSELECT "episodes".* FROM "episodes"[0m
+  Rendered appearances/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
